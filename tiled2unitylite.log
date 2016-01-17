@@ -1,0 +1,34 @@
+Missing TMXPATH argument.
+  If using the GUI, try opening a TMX file now
+  If using the command line, provide a path to a TMX file
+  If using from Tiled Map Editor, try adding %mapfile to the command
+Tiled2UnityLite Utility, Version: 1.0.2.3
+Usage: Tiled2UnityLite [OPTIONS]+ TMXPATH [UNITYDIR]
+Example: Tiled2UnityLite --verbose -s=0.01 MyTiledMap.tmx ../../MyUnityProjectFolder/Assets/Tiled2Unity
+
+Options:
+  -s, --scale=VALUE          Scale the output vertices by a value.
+                               A value of 0.01 is popular for many Unity 
+                               projects that use 'Pixels Per Unit' of 100 for 
+                               sprites.
+                               Default is 1 (no scaling).
+  -t, --texel-bias=VALUE     Bias for texel sampling.
+                               Texels are offset by 1 / value.
+                               Default value is 8192.
+                                A value of 0 means no bias.
+  -v, --verbose              Print verbose messages.
+  -h, --help                 Display this help message.
+
+Prefab object properties (set in TMX file for each layer/object)
+  unity:sortingLayerName
+  unity:sortingOrder
+  unity:layer
+  unity:tag
+  unity:scale
+  unity:isTrigger
+  unity:ignore (value = [false|true|collision|visual])
+  unity:resource (value = [false|true])
+  unity:resourcePath
+  (Other properties are exported for custom scripting in your Unity project)
+Support Tiled Map Editor on Patreon: https://www.patreon.com/bjorn
+Make a donation for Tiled2Unity: http://www.seanba.com/donate
